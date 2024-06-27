@@ -1,6 +1,6 @@
-# Neighborhood Structure Enhancement And Denoising Method For Multi-Behavior Recommendation
+# Neighborhood Structure Enhancement And Denoising Method For Multi-Behavior Recommendation.
 
-## This is the implementation of NSED on python=3. 8, pytorch=1.13
+## This is the implementation of NSED on python=3. 8, pytorch=1.13.
 
 **getting started**
 
@@ -11,12 +11,25 @@ first please check that the environment contains the packages in requirements.tx
 You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in processing data to deal with data sets and preparation. Let's take the Taobao dataset as an example.
 
 **Before you run the main.py , you are supposed build a folder name: check_point to store the model.pth**.
-## In order to better double line, I published the data set, log file and corresponding weight file.You can download it here: https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x
 
+## In order to better double line, I published the other data set, log file and corresponding weight file.You can download it here: https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x 
+### We released the Beibei dataset for better experiments。
 Run command: Some other parameters you can view in the code.
+```
+python main.py --device=cuda:3 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=taobao --task_weight=1,1,1 --layers=2,3,3
+```
+
+
 
 ```
-python main.py --device=cuda:1 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=taobao --task_weight=1,1,1 --layers=2,3,3
+#taobao best result
+python main.py --device=cuda:3 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=taobao --task_weight=1,1,1 --layers=2,3,3
+
+#tmall best result
+python main.py --device=cuda:3 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=tmall --task_weight=2,1,1,2 --layers=2,2,2,3
+
+#beibei best result
+python main.py --device=cuda:1 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=beibei --task_weight=0.14286,0.42857,0.42857 --layers=2,3,3
 ```
 
 
