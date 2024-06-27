@@ -8,7 +8,7 @@ first please check that the environment contains the packages in requirements.tx
 
  You need to install torch-cluster, torch-scatter, torch-sparse before you install torch_geometric, this link should help you.[pytorch-geometric.com/whl/](https://pytorch-geometric.com/whl/) And you can see the [Documentation](https://github.com/rusty1s/pytorch_scatter) when installing torch_geometric.
 
-You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in processing data to deal with data sets and preparation. Let's take the Taobao dataset as an example.
+You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in processing data to deal with data sets and preparation. Let's take the Beibei dataset as an example.
 
 **Before you run the main.py , you are supposed build a folder name: check_point to store the model.pth**.
 
