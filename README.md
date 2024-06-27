@@ -21,12 +21,14 @@ python main.py --device=cuda:1 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-
 
 
 ## Model 
+![image-20240627185544054]([C:\Users\25675\AppData\Roaming\Typora\typora-user-images\image-20240627185544054.png](https://drive.google.com/file/d/1fDCmgAu_OctPvf7iO20zIaUr5np_K4n_/view?usp=drive_link
+))
 
-![image-20240627185517611](C:\Users\25675\AppData\Roaming\Typora\typora-user-images\image-20240627185517611.png)
 
 ### Denoise Module architecture diagram
 
-![image-20240627185544054](C:\Users\25675\AppData\Roaming\Typora\typora-user-images\image-20240627185544054.png)
+![image-20240627185544054]([C:\Users\25675\AppData\Roaming\Typora\typora-user-images\image-20240627185544054.png](https://drive.google.com/file/d/1zT64GNjbghCzMQnC2A3WL1MHa9yR-h05/view?usp=drive_link))
+
 
 
 
