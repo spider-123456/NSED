@@ -2,7 +2,7 @@
 
 ## This is the implementation of NSED on python=3. 8, pytorch=1.13.
 
-**getting started**
+**Getting started:**
 
 first please check that the environment contains the packages in requirements.txt.
 
