@@ -1,1 +1,2 @@
 This folder holds the data set, see README for details
+you can download it at https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x
