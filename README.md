@@ -11,6 +11,7 @@ first please check that the environment contains the packages in requirements.tx
 You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in processing data to deal with data sets and preparation. Let's take the Taobao dataset as an example.
 
 **Before you run the main.py , you are supposed build a folder name: check_point to store the model.pth**.
+## In order to better double line, I published the data set, log file and corresponding weight file.You can download it here: https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x
 
 Run command: Some other parameters you can view in the code.
 
