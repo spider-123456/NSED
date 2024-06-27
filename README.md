@@ -12,15 +12,13 @@ You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in proce
 
 **Before you run the main.py , you are supposed build a folder name: check_point to store the model.pth**.
 
-## In order to better double line, I published the other data set, log file and corresponding weight file.You can download it here: https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x 
-### We released the Beibei dataset for better experiments。
+## Log files and weight files are provided for better results of compound line experiments.
+### We released the Beibei dataset for better experiments. Additional data sets can be obtained from here ： https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x 
 Run command: Some other parameters you can view in the code.
 ```
 python main.py --device=cuda:3 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=taobao --task_weight=1,1,1 --layers=2,3,3
 ```
-
-
-
+**how to get the best result**.
 ```
 #taobao best result
 python main.py --device=cuda:3 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-5 --lr=0.001 --data_name=taobao --task_weight=1,1,1 --layers=2,3,3
