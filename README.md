@@ -34,13 +34,13 @@ python main.py --device=cuda:1 --ssl_reg=3e-5 --ssl_weight=1e-5  --inter_reg=1e-
 
 ## Model 
 
-![MODEL](https://github.com/spider-123456/NSED/assets/73099091/34e7d268-6cec-47a9-b47c-85b51bea530b)
+
+![Fig3](https://github.com/spider-123456/NSED/assets/73099091/1fe87770-82f6-4c45-9448-11c564c9a347)
 
 
 ### Denoise Module architecture diagram
 
-![denoise](https://github.com/spider-123456/NSED/assets/73099091/1ea07d17-bca3-4a35-b916-bf2724a0ee07)
-
+![Fig4](https://github.com/spider-123456/NSED/assets/73099091/d5e46ecc-fd03-4457-9238-d9b42fbce1f7)
 
 
 ### Code architecture
