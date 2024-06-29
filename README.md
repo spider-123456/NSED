@@ -10,7 +10,7 @@ first please check that the environment contains the packages in requirements.tx
 
 You can refer to https://github.com/MingshiYan/CRGCN?tab=readme-ov-file in processing data to deal with data sets and preparation. Let's take the Beibei dataset as an example.
 
-**Before you run the main.py , you are supposed build a folder name: check_point to store the model.pth**.
+**Before you run the main.py , you are supposed to build a folder nameed check_point to store the model.pth**.
 
 ## Log files and weight files are provided for better results of compound line experiments.
 ### We released the Beibei dataset for better experiments. Additional data sets can be obtained from here ： https://drive.google.com/drive/folders/1PCmlXPGR-rgfbK7e9Ia5c073-DE9xi9x 
