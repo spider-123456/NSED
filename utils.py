@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @File  : utils.py
-# @Author: yanms
-# @Date  : 2021/10/23 11:26
-# @Desc  :
 import torch
 import torch.nn as nn
 
