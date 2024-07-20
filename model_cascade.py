@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : model.py
-# @Author: yanms
-# @Date  : 2021/11/1 16:16
-# @Desc  : CRGCN
+# @File  : model_cascade.py
+# @Author: Wcai
+# @Date  : 2024/3/26 16:16
+# @Desc  : NESD
 
 import os.path
 
