@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @File  : gcn_conv.py
-# @Author: yanms
-# @Date  : 2021/11/20 21:30
-# @Desc  :
-
-
 from typing import Optional, Tuple
 from torch_geometric.typing import Adj, OptTensor
 
