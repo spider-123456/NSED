@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @File  : main.py
-# @Author: yanms
-# @Date  : 2021/11/1 15:25
-# @Desc  :
+
 import argparse
 import random
 import time
