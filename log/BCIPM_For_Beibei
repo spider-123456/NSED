@@ -1,0 +1,86 @@
+2024-12-07 04:09:06.659 | INFO     | __main__:<module>:113 - Namespace(TIME='2024-12-07 04_08_43', batch_size=1024, behaviors=['view', 'cart', 'buy'], check_point='', data_name='beibei', data_path='./data/beibei', decay=0.001, device='cuda:1', embedding_size=64, epochs=200, gpu_no=1, if_load_model=False, layers=2, log_reg=0.3, loss_type='bpr', lr=0.0001, message_dropout=0.25, metrics=['hit', 'ndcg'], min_epoch=5, model_name='Beibei', model_path='./check_point', neg_count=4, node_dropout=0.75, omega=1, reg_weight=0.0005, test_batch_size=1024, test_writer=<torch.utils.tensorboard.writer.SummaryWriter object at 0x7fb85972ce10>, topk=[10, 20, 50, 80], train_writer=<torch.utils.tensorboard.writer.SummaryWriter object at 0x7fb85972cc50>)
+2024-12-07 04:09:06.659 | INFO     | __main__:<module>:114 - BIPN(
+  (message_dropout): Dropout(p=0.25, inplace=False)
+  (user_embedding): Embedding(21717, 64, padding_idx=0)
+  (item_embedding): Embedding(7978, 64, padding_idx=0)
+  (global_Graph): LightGCN()
+  (behavior_Graph): LightGCN()
+  (RZ): Linear(in_features=131, out_features=128, bias=False)
+  (U): Linear(in_features=131, out_features=64, bias=False)
+  (bpr_loss): BPRLoss()
+  (emb_loss): EmbLoss()
+  (cross_loss): BCELoss()
+)
+2024-12-07 04:19:30.763 | INFO     | trainer:_train_one_epoch:162 - epoch 1 624.10s Train loss is [0.2435] 
+2024-12-07 04:19:35.003 | INFO     | trainer:_train_one_epoch:173 - test 1 cost time 4.24s, result: {'hit@10': 0.0402, 'ndcg@10': 0.0191, 'hit@20': 0.0704, 'ndcg@20': 0.0267, 'hit@50': 0.1468, 'ndcg@50': 0.0418, 'hit@80': 0.2125, 'ndcg@80': 0.0526} 
+2024-12-07 04:30:00.744 | INFO     | trainer:_train_one_epoch:162 - epoch 2 620.86s Train loss is [0.1711] 
+2024-12-07 04:30:04.971 | INFO     | trainer:_train_one_epoch:173 - test 2 cost time 4.23s, result: {'hit@10': 0.044, 'ndcg@10': 0.0212, 'hit@20': 0.0757, 'ndcg@20': 0.0291, 'hit@50': 0.15, 'ndcg@50': 0.0438, 'hit@80': 0.2106, 'ndcg@80': 0.0538} 
+2024-12-07 04:40:31.210 | INFO     | trainer:_train_one_epoch:162 - epoch 3 621.34s Train loss is [0.1572] 
+2024-12-07 04:40:35.432 | INFO     | trainer:_train_one_epoch:173 - test 3 cost time 4.22s, result: {'hit@10': 0.0469, 'ndcg@10': 0.0227, 'hit@20': 0.081, 'ndcg@20': 0.0313, 'hit@50': 0.1658, 'ndcg@50': 0.0479, 'hit@80': 0.2289, 'ndcg@80': 0.0584} 
+2024-12-07 04:51:01.548 | INFO     | trainer:_train_one_epoch:162 - epoch 4 621.20s Train loss is [0.1515] 
+2024-12-07 04:51:05.745 | INFO     | trainer:_train_one_epoch:173 - test 4 cost time 4.20s, result: {'hit@10': 0.0431, 'ndcg@10': 0.0209, 'hit@20': 0.0774, 'ndcg@20': 0.0295, 'hit@50': 0.1575, 'ndcg@50': 0.0452, 'hit@80': 0.2174, 'ndcg@80': 0.0552} 
+2024-12-07 05:01:26.344 | INFO     | trainer:_train_one_epoch:162 - epoch 5 620.58s Train loss is [0.1475] 
+2024-12-07 05:01:30.558 | INFO     | trainer:_train_one_epoch:173 - test 5 cost time 4.21s, result: {'hit@10': 0.0481, 'ndcg@10': 0.024, 'hit@20': 0.0834, 'ndcg@20': 0.0329, 'hit@50': 0.1614, 'ndcg@50': 0.0482, 'hit@80': 0.2254, 'ndcg@80': 0.0588} 
+2024-12-07 05:11:56.474 | INFO     | trainer:_train_one_epoch:162 - epoch 6 620.98s Train loss is [0.1447] 
+2024-12-07 05:12:00.704 | INFO     | trainer:_train_one_epoch:173 - test 6 cost time 4.23s, result: {'hit@10': 0.053, 'ndcg@10': 0.0251, 'hit@20': 0.0922, 'ndcg@20': 0.035, 'hit@50': 0.1786, 'ndcg@50': 0.052, 'hit@80': 0.245, 'ndcg@80': 0.063} 
+2024-12-07 05:22:28.830 | INFO     | trainer:_train_one_epoch:162 - epoch 7 623.22s Train loss is [0.1431] 
+2024-12-07 05:22:33.057 | INFO     | trainer:_train_one_epoch:173 - test 7 cost time 4.23s, result: {'hit@10': 0.0517, 'ndcg@10': 0.025, 'hit@20': 0.0874, 'ndcg@20': 0.034, 'hit@50': 0.1692, 'ndcg@50': 0.0501, 'hit@80': 0.2318, 'ndcg@80': 0.0605} 
+2024-12-07 05:32:55.823 | INFO     | trainer:_train_one_epoch:162 - epoch 8 622.71s Train loss is [0.1413] 
+2024-12-07 05:33:00.050 | INFO     | trainer:_train_one_epoch:173 - test 8 cost time 4.23s, result: {'hit@10': 0.0573, 'ndcg@10': 0.0283, 'hit@20': 0.0963, 'ndcg@20': 0.0381, 'hit@50': 0.1863, 'ndcg@50': 0.0557, 'hit@80': 0.2525, 'ndcg@80': 0.0667} 
+2024-12-07 05:43:25.680 | INFO     | trainer:_train_one_epoch:162 - epoch 9 620.65s Train loss is [0.1404] 
+2024-12-07 05:43:29.884 | INFO     | trainer:_train_one_epoch:173 - test 9 cost time 4.20s, result: {'hit@10': 0.0557, 'ndcg@10': 0.0269, 'hit@20': 0.093, 'ndcg@20': 0.0362, 'hit@50': 0.1794, 'ndcg@50': 0.0532, 'hit@80': 0.2467, 'ndcg@80': 0.0644} 
+2024-12-07 05:53:49.780 | INFO     | trainer:_train_one_epoch:162 - epoch 10 619.86s Train loss is [0.1393] 
+2024-12-07 05:53:54.001 | INFO     | trainer:_train_one_epoch:173 - test 10 cost time 4.22s, result: {'hit@10': 0.0529, 'ndcg@10': 0.0258, 'hit@20': 0.0901, 'ndcg@20': 0.0351, 'hit@50': 0.1737, 'ndcg@50': 0.0516, 'hit@80': 0.2377, 'ndcg@80': 0.0622} 
+2024-12-07 06:04:14.636 | INFO     | trainer:_train_one_epoch:162 - epoch 11 620.58s Train loss is [0.1386] 
+2024-12-07 06:04:18.862 | INFO     | trainer:_train_one_epoch:173 - test 11 cost time 4.22s, result: {'hit@10': 0.0565, 'ndcg@10': 0.0278, 'hit@20': 0.097, 'ndcg@20': 0.0379, 'hit@50': 0.1877, 'ndcg@50': 0.0558, 'hit@80': 0.2539, 'ndcg@80': 0.0668} 
+2024-12-07 06:14:39.171 | INFO     | trainer:_train_one_epoch:162 - epoch 12 620.29s Train loss is [0.1376] 
+2024-12-07 06:14:43.402 | INFO     | trainer:_train_one_epoch:173 - test 12 cost time 4.23s, result: {'hit@10': 0.0585, 'ndcg@10': 0.0289, 'hit@20': 0.1018, 'ndcg@20': 0.0398, 'hit@50': 0.1867, 'ndcg@50': 0.0565, 'hit@80': 0.2533, 'ndcg@80': 0.0676} 
+2024-12-07 06:25:10.475 | INFO     | trainer:_train_one_epoch:162 - epoch 13 622.08s Train loss is [0.1373] 
+2024-12-07 06:25:14.722 | INFO     | trainer:_train_one_epoch:173 - test 13 cost time 4.25s, result: {'hit@10': 0.0588, 'ndcg@10': 0.0282, 'hit@20': 0.102, 'ndcg@20': 0.039, 'hit@50': 0.1942, 'ndcg@50': 0.0572, 'hit@80': 0.2634, 'ndcg@80': 0.0686} 
+2024-12-07 06:35:38.077 | INFO     | trainer:_train_one_epoch:162 - epoch 14 623.29s Train loss is [0.1366] 
+2024-12-07 06:35:42.330 | INFO     | trainer:_train_one_epoch:173 - test 14 cost time 4.25s, result: {'hit@10': 0.0582, 'ndcg@10': 0.0284, 'hit@20': 0.0997, 'ndcg@20': 0.0387, 'hit@50': 0.1896, 'ndcg@50': 0.0565, 'hit@80': 0.2547, 'ndcg@80': 0.0673} 
+2024-12-07 06:46:04.941 | INFO     | trainer:_train_one_epoch:162 - epoch 15 622.59s Train loss is [0.1361] 
+2024-12-07 06:46:09.181 | INFO     | trainer:_train_one_epoch:173 - test 15 cost time 4.24s, result: {'hit@10': 0.0588, 'ndcg@10': 0.0278, 'hit@20': 0.1023, 'ndcg@20': 0.0387, 'hit@50': 0.1897, 'ndcg@50': 0.056, 'hit@80': 0.2555, 'ndcg@80': 0.0669} 
+2024-12-07 06:56:31.327 | INFO     | trainer:_train_one_epoch:162 - epoch 16 622.13s Train loss is [0.1357] 
+2024-12-07 06:56:35.547 | INFO     | trainer:_train_one_epoch:173 - test 16 cost time 4.22s, result: {'hit@10': 0.0599, 'ndcg@10': 0.0295, 'hit@20': 0.0999, 'ndcg@20': 0.0395, 'hit@50': 0.1898, 'ndcg@50': 0.0572, 'hit@80': 0.2552, 'ndcg@80': 0.0681} 
+2024-12-07 07:07:00.662 | INFO     | trainer:_train_one_epoch:162 - epoch 17 620.10s Train loss is [0.1350] 
+2024-12-07 07:07:04.907 | INFO     | trainer:_train_one_epoch:173 - test 17 cost time 4.24s, result: {'hit@10': 0.0562, 'ndcg@10': 0.0268, 'hit@20': 0.0988, 'ndcg@20': 0.0376, 'hit@50': 0.1927, 'ndcg@50': 0.056, 'hit@80': 0.2586, 'ndcg@80': 0.067} 
+2024-12-07 07:17:26.636 | INFO     | trainer:_train_one_epoch:162 - epoch 18 621.69s Train loss is [0.1349] 
+2024-12-07 07:17:30.866 | INFO     | trainer:_train_one_epoch:173 - test 18 cost time 4.23s, result: {'hit@10': 0.0584, 'ndcg@10': 0.0282, 'hit@20': 0.1, 'ndcg@20': 0.0386, 'hit@50': 0.1953, 'ndcg@50': 0.0574, 'hit@80': 0.2626, 'ndcg@80': 0.0685} 
+2024-12-07 07:27:52.671 | INFO     | trainer:_train_one_epoch:162 - epoch 19 621.76s Train loss is [0.1347] 
+2024-12-07 07:27:56.907 | INFO     | trainer:_train_one_epoch:173 - test 19 cost time 4.24s, result: {'hit@10': 0.0555, 'ndcg@10': 0.027, 'hit@20': 0.0985, 'ndcg@20': 0.0377, 'hit@50': 0.1914, 'ndcg@50': 0.0561, 'hit@80': 0.2586, 'ndcg@80': 0.0672} 
+2024-12-07 07:38:18.966 | INFO     | trainer:_train_one_epoch:162 - epoch 20 622.04s Train loss is [0.1342] 
+2024-12-07 07:38:23.190 | INFO     | trainer:_train_one_epoch:173 - test 20 cost time 4.22s, result: {'hit@10': 0.0573, 'ndcg@10': 0.0288, 'hit@20': 0.0997, 'ndcg@20': 0.0394, 'hit@50': 0.1919, 'ndcg@50': 0.0576, 'hit@80': 0.2576, 'ndcg@80': 0.0684} 
+2024-12-07 07:48:44.689 | INFO     | trainer:_train_one_epoch:162 - epoch 21 621.48s Train loss is [0.1344] 
+2024-12-07 07:48:48.953 | INFO     | trainer:_train_one_epoch:173 - test 21 cost time 4.26s, result: {'hit@10': 0.0609, 'ndcg@10': 0.0302, 'hit@20': 0.1035, 'ndcg@20': 0.0409, 'hit@50': 0.1968, 'ndcg@50': 0.0592, 'hit@80': 0.2637, 'ndcg@80': 0.0703} 
+2024-12-07 07:59:16.635 | INFO     | trainer:_train_one_epoch:162 - epoch 22 622.66s Train loss is [0.1338] 
+2024-12-07 07:59:20.860 | INFO     | trainer:_train_one_epoch:173 - test 22 cost time 4.22s, result: {'hit@10': 0.0564, 'ndcg@10': 0.0276, 'hit@20': 0.0965, 'ndcg@20': 0.0377, 'hit@50': 0.1878, 'ndcg@50': 0.0556, 'hit@80': 0.2523, 'ndcg@80': 0.0664} 
+2024-12-07 08:09:43.300 | INFO     | trainer:_train_one_epoch:162 - epoch 23 622.39s Train loss is [0.1338] 
+2024-12-07 08:09:47.520 | INFO     | trainer:_train_one_epoch:173 - test 23 cost time 4.22s, result: {'hit@10': 0.0609, 'ndcg@10': 0.0303, 'hit@20': 0.1042, 'ndcg@20': 0.0411, 'hit@50': 0.1948, 'ndcg@50': 0.0589, 'hit@80': 0.2637, 'ndcg@80': 0.0703} 
+2024-12-07 08:20:13.201 | INFO     | trainer:_train_one_epoch:162 - epoch 24 620.67s Train loss is [0.1334] 
+2024-12-07 08:20:17.430 | INFO     | trainer:_train_one_epoch:173 - test 24 cost time 4.23s, result: {'hit@10': 0.067, 'ndcg@10': 0.0331, 'hit@20': 0.1086, 'ndcg@20': 0.0436, 'hit@50': 0.2034, 'ndcg@50': 0.0623, 'hit@80': 0.2696, 'ndcg@80': 0.0732} 
+2024-12-07 08:30:44.749 | INFO     | trainer:_train_one_epoch:162 - epoch 25 622.31s Train loss is [0.1332] 
+2024-12-07 08:30:48.978 | INFO     | trainer:_train_one_epoch:173 - test 25 cost time 4.23s, result: {'hit@10': 0.0623, 'ndcg@10': 0.0309, 'hit@20': 0.1049, 'ndcg@20': 0.0417, 'hit@50': 0.1939, 'ndcg@50': 0.0592, 'hit@80': 0.2622, 'ndcg@80': 0.0706} 
+2024-12-07 08:41:10.881 | INFO     | trainer:_train_one_epoch:162 - epoch 26 621.86s Train loss is [0.1327] 
+2024-12-07 08:41:15.099 | INFO     | trainer:_train_one_epoch:173 - test 26 cost time 4.22s, result: {'hit@10': 0.0593, 'ndcg@10': 0.0291, 'hit@20': 0.1032, 'ndcg@20': 0.0402, 'hit@50': 0.1949, 'ndcg@50': 0.0582, 'hit@80': 0.263, 'ndcg@80': 0.0695} 
+2024-12-07 08:51:38.070 | INFO     | trainer:_train_one_epoch:162 - epoch 27 622.95s Train loss is [0.1330] 
+2024-12-07 08:51:42.274 | INFO     | trainer:_train_one_epoch:173 - test 27 cost time 4.20s, result: {'hit@10': 0.0629, 'ndcg@10': 0.031, 'hit@20': 0.1034, 'ndcg@20': 0.0411, 'hit@50': 0.1911, 'ndcg@50': 0.0584, 'hit@80': 0.2568, 'ndcg@80': 0.0692} 
+2024-12-07 09:02:05.382 | INFO     | trainer:_train_one_epoch:162 - epoch 28 623.07s Train loss is [0.1324] 
+2024-12-07 09:02:09.593 | INFO     | trainer:_train_one_epoch:173 - test 28 cost time 4.21s, result: {'hit@10': 0.0578, 'ndcg@10': 0.028, 'hit@20': 0.0982, 'ndcg@20': 0.0381, 'hit@50': 0.1871, 'ndcg@50': 0.0556, 'hit@80': 0.2499, 'ndcg@80': 0.066} 
+2024-12-07 09:12:33.333 | INFO     | trainer:_train_one_epoch:162 - epoch 29 623.69s Train loss is [0.1324] 
+2024-12-07 09:12:37.583 | INFO     | trainer:_train_one_epoch:173 - test 29 cost time 4.25s, result: {'hit@10': 0.0594, 'ndcg@10': 0.0293, 'hit@20': 0.1011, 'ndcg@20': 0.0398, 'hit@50': 0.189, 'ndcg@50': 0.0571, 'hit@80': 0.2528, 'ndcg@80': 0.0677} 
+2024-12-07 09:23:01.442 | INFO     | trainer:_train_one_epoch:162 - epoch 30 623.81s Train loss is [0.1322] 
+2024-12-07 09:23:05.676 | INFO     | trainer:_train_one_epoch:173 - test 30 cost time 4.23s, result: {'hit@10': 0.0598, 'ndcg@10': 0.0294, 'hit@20': 0.1024, 'ndcg@20': 0.0401, 'hit@50': 0.1932, 'ndcg@50': 0.058, 'hit@80': 0.2596, 'ndcg@80': 0.069} 
+2024-12-07 09:33:29.380 | INFO     | trainer:_train_one_epoch:162 - epoch 31 623.65s Train loss is [0.1318] 
+2024-12-07 09:33:33.605 | INFO     | trainer:_train_one_epoch:173 - test 31 cost time 4.22s, result: {'hit@10': 0.057, 'ndcg@10': 0.0276, 'hit@20': 0.1002, 'ndcg@20': 0.0384, 'hit@50': 0.19, 'ndcg@50': 0.0562, 'hit@80': 0.2596, 'ndcg@80': 0.0677} 
+2024-12-07 09:43:56.911 | INFO     | trainer:_train_one_epoch:162 - epoch 32 623.29s Train loss is [0.1318] 
+2024-12-07 09:44:01.180 | INFO     | trainer:_train_one_epoch:173 - test 32 cost time 4.27s, result: {'hit@10': 0.0618, 'ndcg@10': 0.0304, 'hit@20': 0.102, 'ndcg@20': 0.0405, 'hit@50': 0.1924, 'ndcg@50': 0.0583, 'hit@80': 0.2597, 'ndcg@80': 0.0695} 
+2024-12-07 09:54:25.748 | INFO     | trainer:_train_one_epoch:162 - epoch 33 624.51s Train loss is [0.1312] 
+2024-12-07 09:54:29.962 | INFO     | trainer:_train_one_epoch:173 - test 33 cost time 4.21s, result: {'hit@10': 0.0645, 'ndcg@10': 0.0321, 'hit@20': 0.11, 'ndcg@20': 0.0435, 'hit@50': 0.2, 'ndcg@50': 0.0612, 'hit@80': 0.2677, 'ndcg@80': 0.0725} 
+2024-12-07 10:04:52.992 | INFO     | trainer:_train_one_epoch:162 - epoch 34 622.97s Train loss is [0.1313] 
+2024-12-07 10:04:57.215 | INFO     | trainer:_train_one_epoch:173 - test 34 cost time 4.22s, result: {'hit@10': 0.0629, 'ndcg@10': 0.0314, 'hit@20': 0.1078, 'ndcg@20': 0.0426, 'hit@50': 0.1985, 'ndcg@50': 0.0605, 'hit@80': 0.2652, 'ndcg@80': 0.0716} 
+2024-12-07 10:15:19.389 | INFO     | trainer:_train_one_epoch:162 - epoch 35 622.15s Train loss is [0.1308] 
+2024-12-07 10:15:23.611 | INFO     | trainer:_train_one_epoch:173 - test 35 cost time 4.22s, result: {'hit@10': 0.0633, 'ndcg@10': 0.0314, 'hit@20': 0.1089, 'ndcg@20': 0.0428, 'hit@50': 0.1998, 'ndcg@50': 0.0607, 'hit@80': 0.2678, 'ndcg@80': 0.072} 
+2024-12-07 10:15:23.612 | INFO     | trainer:train_model:90 - training end, best iteration 24, results: {'hit@10': 0.067, 'ndcg@10': 0.0331, 'hit@20': 0.1086, 'ndcg@20': 0.0436, 'hit@50': 0.2034, 'ndcg@50': 0.0623, 'hit@80': 0.2696, 'ndcg@80': 0.0732}
+2024-12-07 10:15:23.612 | INFO     | trainer:train_model:92 - final test result is:  {'hit@10': 0.067, 'ndcg@10': 0.0331, 'hit@20': 0.1086, 'ndcg@20': 0.0436, 'hit@50': 0.2034, 'ndcg@50': 0.0623, 'hit@80': 0.2696, 'ndcg@80': 0.0732}
+2024-12-07 10:15:23.745 | INFO     | __main__:<module>:117 - train end total cost time: 22000.061297416687
