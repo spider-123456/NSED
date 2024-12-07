@@ -1,0 +1,36 @@
+2024-10-25 11:40:33.571 | INFO     | __main__:<module>:107 - Namespace(TIME='2024-10-25 11_40_26', batch_size=1024, behaviors=['view', 'cart', 'buy'], check_point='', data_name='taobao2', data_path='./data/taobao2', decay=0.001, device='cuda:0', embedding_size=64, epochs=200, gpu_no=1, if_load_model=False, layers=2, log_reg=0.4, loss_type='bpr', lr=0.001, message_dropout=0.25, metrics=['hit', 'ndcg'], min_epoch=5, model_name='tmall', model_path='./check_point', neg_count=4, node_dropout=0.75, omega=1, reg_weight=0.001, test_batch_size=1024, test_writer=<torch.utils.tensorboard.writer.SummaryWriter object at 0x00000236FE36A4F0>, topk=[10, 20, 50, 80], train_writer=<torch.utils.tensorboard.writer.SummaryWriter object at 0x00000236FE365E80>)
+2024-10-25 11:40:33.571 | INFO     | __main__:<module>:108 - BIPN(
+  (message_dropout): Dropout(p=0.25, inplace=False)
+  (user_embedding): Embedding(15450, 64, padding_idx=0)
+  (item_embedding): Embedding(11954, 64, padding_idx=0)
+  (global_Graph): LightGCN()
+  (behavior_Graph): LightGCN()
+  (RZ): Linear(in_features=131, out_features=128, bias=False)
+  (U): Linear(in_features=131, out_features=64, bias=False)
+  (bpr_loss): BPRLoss()
+  (emb_loss): EmbLoss()
+  (cross_loss): BCELoss()
+)
+2024-10-25 11:46:05.982 | INFO     | trainer:_train_one_epoch:162 - epoch 1 332.41s Train loss is [0.2347] 
+2024-10-25 11:46:12.728 | INFO     | trainer:_train_one_epoch:171 - test 1 cost time 6.75s, result: {'hit@10': 0.0992, 'ndcg@10': 0.0554, 'hit@20': 0.1455, 'ndcg@20': 0.0671, 'hit@50': 0.2225, 'ndcg@50': 0.0823, 'hit@80': 0.271, 'ndcg@80': 0.0904} 
+2024-10-25 11:53:33.299 | INFO     | trainer:_train_one_epoch:162 - epoch 2 437.26s Train loss is [0.2048] 
+2024-10-25 11:53:36.729 | INFO     | trainer:_train_one_epoch:171 - test 2 cost time 3.43s, result: {'hit@10': 0.1106, 'ndcg@10': 0.0609, 'hit@20': 0.1554, 'ndcg@20': 0.0722, 'hit@50': 0.2367, 'ndcg@50': 0.0883, 'hit@80': 0.2874, 'ndcg@80': 0.0967} 
+2024-10-25 11:57:25.227 | INFO     | trainer:_train_one_epoch:162 - epoch 3 227.13s Train loss is [0.2004] 
+2024-10-25 11:57:28.818 | INFO     | trainer:_train_one_epoch:171 - test 3 cost time 3.59s, result: {'hit@10': 0.1167, 'ndcg@10': 0.064, 'hit@20': 0.1655, 'ndcg@20': 0.0762, 'hit@50': 0.2498, 'ndcg@50': 0.093, 'hit@80': 0.3023, 'ndcg@80': 0.1017} 
+2024-10-25 12:01:21.763 | INFO     | trainer:_train_one_epoch:162 - epoch 4 231.34s Train loss is [0.1983] 
+2024-10-25 12:01:25.336 | INFO     | trainer:_train_one_epoch:171 - test 4 cost time 3.57s, result: {'hit@10': 0.1206, 'ndcg@10': 0.0653, 'hit@20': 0.1722, 'ndcg@20': 0.0783, 'hit@50': 0.2576, 'ndcg@50': 0.0952, 'hit@80': 0.3109, 'ndcg@80': 0.1041} 
+2024-10-25 12:07:41.087 | INFO     | trainer:_train_one_epoch:162 - epoch 5 374.38s Train loss is [0.1969] 
+2024-10-25 12:07:44.701 | INFO     | trainer:_train_one_epoch:171 - test 5 cost time 3.61s, result: {'hit@10': 0.1231, 'ndcg@10': 0.0674, 'hit@20': 0.1718, 'ndcg@20': 0.0797, 'hit@50': 0.2585, 'ndcg@50': 0.0969, 'hit@80': 0.3139, 'ndcg@80': 0.1061} 
+2024-10-25 12:12:14.621 | INFO     | trainer:_train_one_epoch:162 - epoch 6 268.52s Train loss is [0.1964] 
+2024-10-25 12:12:18.215 | INFO     | trainer:_train_one_epoch:171 - test 6 cost time 3.59s, result: {'hit@10': 0.121, 'ndcg@10': 0.0664, 'hit@20': 0.1708, 'ndcg@20': 0.079, 'hit@50': 0.2533, 'ndcg@50': 0.0953, 'hit@80': 0.3063, 'ndcg@80': 0.1041} 
+2024-10-25 12:16:07.110 | INFO     | trainer:_train_one_epoch:162 - epoch 7 228.79s Train loss is [0.1967] 
+2024-10-25 12:16:10.629 | INFO     | trainer:_train_one_epoch:171 - test 7 cost time 3.52s, result: {'hit@10': 0.12, 'ndcg@10': 0.065, 'hit@20': 0.1664, 'ndcg@20': 0.0767, 'hit@50': 0.2538, 'ndcg@50': 0.094, 'hit@80': 0.3068, 'ndcg@80': 0.1028} 
+2024-10-25 12:19:59.930 | INFO     | trainer:_train_one_epoch:162 - epoch 8 229.18s Train loss is [0.1959] 
+2024-10-25 12:20:03.471 | INFO     | trainer:_train_one_epoch:171 - test 8 cost time 3.54s, result: {'hit@10': 0.1194, 'ndcg@10': 0.0654, 'hit@20': 0.1682, 'ndcg@20': 0.0776, 'hit@50': 0.2558, 'ndcg@50': 0.0949, 'hit@80': 0.3115, 'ndcg@80': 0.1041} 
+2024-10-25 12:23:52.012 | INFO     | trainer:_train_one_epoch:162 - epoch 9 228.41s Train loss is [0.1954] 
+2024-10-25 12:23:55.650 | INFO     | trainer:_train_one_epoch:171 - test 9 cost time 3.64s, result: {'hit@10': 0.1175, 'ndcg@10': 0.0642, 'hit@20': 0.1697, 'ndcg@20': 0.0773, 'hit@50': 0.2561, 'ndcg@50': 0.0944, 'hit@80': 0.3102, 'ndcg@80': 0.1034} 
+2024-10-25 12:27:44.679 | INFO     | trainer:_train_one_epoch:162 - epoch 10 228.95s Train loss is [0.1956] 
+2024-10-25 12:27:48.206 | INFO     | trainer:_train_one_epoch:171 - test 10 cost time 3.53s, result: {'hit@10': 0.1197, 'ndcg@10': 0.0656, 'hit@20': 0.1682, 'ndcg@20': 0.0778, 'hit@50': 0.2512, 'ndcg@50': 0.0942, 'hit@80': 0.3039, 'ndcg@80': 0.1029} 
+2024-10-25 12:27:48.206 | INFO     | trainer:train_model:89 - training end, best iteration 5, results: {'hit@10': 0.1231, 'ndcg@10': 0.0674, 'hit@20': 0.1718, 'ndcg@20': 0.0797, 'hit@50': 0.2585, 'ndcg@50': 0.0969, 'hit@80': 0.3139, 'ndcg@80': 0.1061}
+2024-10-25 12:27:48.206 | INFO     | trainer:train_model:92 - final test result is:  {'hit@10': 0.1231, 'ndcg@10': 0.0674, 'hit@20': 0.1718, 'ndcg@20': 0.0797, 'hit@50': 0.2585, 'ndcg@50': 0.0969, 'hit@80': 0.3139, 'ndcg@80': 0.1061}
+2024-10-25 12:27:48.235 | INFO     | __main__:<module>:111 - train end total cost time: 2841.7301211357117
